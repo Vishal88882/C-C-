@@ -328,140 +328,147 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <string.h>
+// #include <stdlib.h>
 
-struct user
-{
-    char username[30];
-    char email[30];
-    char password[30];
-    char tasks[500];
-};
+// struct user
+// {
+//     char username[30];
+//     char email[30];
+//     char password[30];
+//     char tasks[500];
+// };
 
-int main()
-{
-    char cmd[10], username_[30], email_[30], password_[30], task_[500];
-    int counter = 0;
+// int main()
+// {
+//     char cmd[10], username_[30], email_[30], password_[30], task_[500];
+//     int counter = 0;
     
-    struct user users[100];
-    while (1)
-    {
-        printf("Enter command (signup or login) : ");
-        scanf("%s", &cmd);
+//     struct user users[100];
+//     while (1)
+//     {
+//         printf("Enter command (signup or login) : ");
+//         scanf("%s", &cmd);
 
-        if (strcmp(cmd, "signup") == 0)
-        {
+//         if (strcmp(cmd, "signup") == 0)
+//         {
             
-            printf("Create your username : ");
-            scanf("%s", username_);
+//             printf("Create your username : ");
+//             scanf("%s", username_);
 
-            printf("Enter you email : ");
-            scanf("%s", email_);
+//             printf("Enter you email : ");
+//             scanf("%s", email_);
 
-            printf("Create your password : ");
-            scanf("%s", password_);
+//             printf("Create your password : ");
+//             scanf("%s", password_);
 
-            for (int j = 0; j <= counter; j++)
-            {
-                if (strcmp(users[j].username, username_) == 0 && strcmp(users[j].email, email_) == 0)
-                {
-                    printf("User Already Exists!\n");
+//             for (int j = 0; j <= counter; j++)
+//             {
+//                 if (strcmp(users[j].username, username_) == 0 && strcmp(users[j].email, email_) == 0)
+//                 {
+//                     printf("User Already Exists!\n");
 
-                    return 0;
-                }
-            }
+//                     return 0;
+//                 }
+//             }
 
-            strcpy(users[counter].username, username_);
-            strcpy(users[counter].email, email_);
-            strcpy(users[counter].password, password_);
-            counter++;
+//             strcpy(users[counter].username, username_);
+//             strcpy(users[counter].email, email_);
+//             strcpy(users[counter].password, password_);
+//             counter++;
 
-            printf("Signup successful\n");
-            printf("To check complete list of users enter \"data\" : ");
-            scanf("%s", cmd);
+//             printf("Signup successful\n");
+//             printf("To check complete list of users enter \"data\" : ");
+//             scanf("%s", cmd);
 
-            if (strcmp(cmd, "data") == 0)
-            {
-                for (int i = 0; i < counter; i++)
-                {
-                    printf("User %d:\n", i + 1);
-                    printf("Username: %s\n", users[i].username);
-                    printf("Email: %s\n", users[i].email);
-                    printf("Password: %s\n", users[i].password);
-                    printf("-----------------------------------------\n");
-                }
-            }
+//             if (strcmp(cmd, "data") == 0)
+//             {
+//                 for (int i = 0; i < counter; i++)
+//                 {
+//                     printf("User %d:\n", i + 1);
+//                     printf("Username: %s\n", users[i].username);
+//                     printf("Email: %s\n", users[i].email);
+//                     printf("Password: %s\n", users[i].password);
+//                     printf("-----------------------------------------\n");
+//                 }
+//             }
 
-            else
-            {
-                printf("Invalid Command!\n");
-            }
-        }
-        else if (strcmp(cmd, "login") == 0)
-        {
-            printf("Enter your username : ");
-            scanf("%s", username_);
+//             else
+//             {
+//                 printf("Invalid Command!\n");
+//             }
+//         }
+//         else if (strcmp(cmd, "login") == 0)
+//         {
+//             printf("Enter your username : ");
+//             scanf("%s", username_);
 
-            printf("Enter you email : ");
-            scanf("%s", email_);
+//             printf("Enter you email : ");
+//             scanf("%s", email_);
 
-            printf("Enter your password : ");
-            scanf("%s", password_);
+//             printf("Enter your password : ");
+//             scanf("%s", password_);
 
-            for (int i = 0; i < counter; i++)
-            {
-                if (strcmp(users[i].username, username_) == 0 && strcmp(users[i].email, email_) == 0)
-                {
-                    printf("Login Successfull!\n");
-                    printf("Do you wanna add tasks \"yes/no\": ");
-                    scanf("%s", cmd);
+//             for (int i = 0; i < counter; i++)
+//             {
+//                 if (strcmp(users[i].username, username_) == 0 && strcmp(users[i].email, email_) == 0)
+//                 {
+//                     printf("Login Successfull!\n");
+//                     printf("Do you wanna add tasks \"yes/no\": ");
+//                     scanf("%s", cmd);
 
-                    for (int i = 0; i <1; i++)
-                    {
-                        if (strcmp(cmd, "yes") == 0)
-                        {
+//                     for (int i = 0; i <1; i++)
+//                     {
+//                         if (strcmp(cmd, "yes") == 0)
+//                         {
 
-                            printf("Enter your task : ");
-                            scanf("%s", task_);
-                            strcat(users[i].tasks, "\n");
-                            strcat(users[i].tasks,task_);
-                            strcat(users[i].tasks, ",\n");
-                            printf("Task added!\n");
-                        }
-                    }
-                    printf("To check complete list of user's data enter \"data\" : ");
-                    scanf("%s", cmd);
+//                             printf("Enter your task : ");
+//                             scanf("%s", task_);
+//                             strcat(users[i].tasks, "\n");
+//                             strcat(users[i].tasks,task_);
+//                             strcat(users[i].tasks, ",\n");
+//                             printf("Task added!\n");
+//                         }
+//                     }
+//                     printf("To check complete list of user's data enter \"data\" : ");
+//                     scanf("%s", cmd);
 
-                    if (strcmp(cmd, "data") == 0)
-                    {
-                        for (int i = 0; i < counter; i++)
-                        {
-                            printf("User %d:\n", i + 1);
-                            printf("Username: %s\n", users[i].username);
-                            printf("Email: %s\n", users[i].email);
-                            printf("Password: %s\n", users[i].password);
-                            printf("Tasks: %s\n", users[i].tasks);
-                            printf("-----------------------------------------\n");
-                        }
-                    }
+//                     if (strcmp(cmd, "data") == 0)
+//                     {
+//                         for (int i = 0; i < counter; i++)
+//                         {
+//                             printf("User %d:\n", i + 1);
+//                             printf("Username: %s\n", users[i].username);
+//                             printf("Email: %s\n", users[i].email);
+//                             printf("Password: %s\n", users[i].password);
+//                             printf("Tasks: %s\n", users[i].tasks);
+//                             printf("-----------------------------------------\n");
+//                         }
+//                     }
 
-                    else
-                    {
-                        printf("Invalid Command!\n");
-                    }
-                }
-                else
-                {
-                    printf("Invalid Credentials!\n");
-                }
-            }
-        }
-        else
-        {
-            printf("Invalid Command!\n");
-        }
-    }
+//                     else
+//                     {
+//                         printf("Invalid Command!\n");
+//                     }
+//                 }
+//                 else
+//                 {
+//                     printf("Invalid Credentials!\n");
+//                 }
+//             }
+//         }
+//         else
+//         {
+//             printf("Invalid Command!\n");
+//         }
+//     }
+//     return 0;
+// }
+
+#include <stdio.h>
+int main(){
+
+
     return 0;
 }
