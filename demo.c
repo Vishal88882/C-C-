@@ -148,10 +148,10 @@ int main()
     //     printf("%d is bigger", c);
     // }
 
-    int arr[] = {20, 30, 40, 50, 10, 90, 0};
+    // int arr[] = {20, 30, 40, 50, 10, 90, 0};
 
-    int length = sizeof(arr) / sizeof(arr[0]);
-    int i = 0, temp;
+    // int length = sizeof(arr) / sizeof(arr[0]);
+    // int i = 0, temp;
     // for(int i =0;i<length;i++){
     //     printf("%d ",(arr[i]));
     // }
@@ -173,7 +173,25 @@ int main()
     //     printf("%d ", arr[i]);
     // }
 
-    
+    int arr[] = {2, 31, 41, 50, 15, 90, 0};
+
+    int length = sizeof(arr) / sizeof(arr[0]);
+    int i = 0, even = 0, odd = 0;
+    int *ptr1 = arr;
+
+    for (int i = 0; i < length; i++)
+    {
+        if (ptr1[i] % 2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+        
+    }
+    printf("EVEN : %d\nODD : %d", even, odd);
 
     return 0;
 }
