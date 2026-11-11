@@ -491,8 +491,8 @@
 //     }
 // }
 
-// COunt vowel and cosnonent==================================
-#include <stdio.h>
+// Count vowel and cosnonent==================================
+// #include <stdio.h>
 
 // int main()
 // {
@@ -511,42 +511,99 @@
 //         {
 //             vow++;
 //         }else if(word == ' '){
-//             temp_len--; 
+//             temp_len--;
 //             continue;
 //         }
 
 //     }
-//     printf("%d",len);
+//     printf("length of string %d\n",len);
 //     printf("vowels : %d\n", vow);
 //     printf("Consonent : %d", temp_len - vow);
 // }
 
+// To count number of words in a sentence===============================================
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[] = "Black wolf jump over healthy hello bro can i help that sheep first!";
+//     int len = sizeof(str) / sizeof(str[0]);
+//     int temp=0;
+//     for (int i = 0; i < len; i++)
+//     {
+//         if(str[i] == ' '){
+//             temp++;
+//         }
+//     }
+//     printf("Total words : %d",temp+1);
+
+//     return 0;
+// }
+
+// To check a string palindrome===========================================================
+
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+//     char str[] = "NITTIN";
+//     // int len = sizeof(str) / sizeof(str[0]);
+//     int len = strlen(str);
+//     char temp_str[50];
+//     strcpy(temp_str, str);
+
+//     char *start = &str[0];
+//     char *end = &str[len - 1];
+//     char temp;
+
+//     printf("Original string : %s\n", temp_str);
+//     while (start < end)
+//     {
+//         temp = *start;
+//         *start = *end;
+//         *end = temp;
+//         start++;
+//         end--;
+//     }
+
+//     printf("Reversed string : ");
+//     for (int i = 0; i < len; i++)
+//     {
+//         printf("%c", str[i]);
+//     }
+
+//     if (strcmp(temp_str, str) == 0)
+//     {
+//         printf("\nYes it's a palindorme string!");
+//     }
+//     else
+//     {
+//         printf("\nIt's not a palindorme string!");
+//     }
+
+//     return 0;
+// }
+
+// To copy a string in another without using stcpy
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[] = "Hello world!";
+//     char copy_str[50];
+//     int i = 0;
+//     while (str[i] != '\0'){
+//         copy_str[i] =str[i];
+//         i++;
+//     }
+//     copy_str[i] ='\0';
+    
+//     printf("%s\n", str);
+//     printf("%s\n", copy_str);
+
+//     return 0;
+// }
 
 
-
-int main()
-{
-    char str[] = "Count vowel and consonent";
-    int len = sizeof(str) / sizeof(str[0]);
-    int temp_len = len;
-    int vow = 0;
-    for (int i = 0; i < len; i++)
-    {
-        char word = str[i];
-        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' )
-        {
-            vow++;
-        }
-        if (str[i] == 'E' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'I')
-        {
-            vow++;
-        }else if(word == ' '){
-            temp_len--; 
-            continue;
-        }
-
-    }
-    printf("%d",len);
-    printf("vowels : %d\n", vow);
-    printf("Consonent : %d", temp_len - vow);
-}
