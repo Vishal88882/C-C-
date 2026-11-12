@@ -585,7 +585,7 @@
 //     return 0;
 // }
 
-// To copy a string in another without using stcpy
+// To copy a string in another without using stcpy=======================================================
 
 // #include <stdio.h>
 
@@ -599,11 +599,176 @@
 //         i++;
 //     }
 //     copy_str[i] ='\0';
-    
+
 //     printf("%s\n", str);
 //     printf("%s\n", copy_str);
 
 //     return 0;
 // }
 
+// To count character in the string================================================================
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+
+//     char str[] = "Hello world";
+//     int len = strlen(str);
+//     int temp = 0;
+
+//     for (int i = 0; i < len; i++)
+//     {
+//         if (str[i] == 'l' || str[i] == 'L')
+//         {
+//             temp++;
+//         }
+//     }
+//     printf("L repeates %d times!", temp);
+//     return 0;
+// }
+
+// To rempve white spaces from a string======================================================
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[] = "Hello World";
+
+//     int i = 0, j = 0;
+
+//     while (str[i] != '\0')
+//     {
+//         if (str[i] != ' ')
+//         {
+//             str[j] = str[i];
+//             j++;
+//         }
+//         i++;
+//     }
+//     str[j] = '\0';
+
+//     printf(str);
+//     return 0;
+// }
+
+// To change case of characters===================================================
+// see line number 1
+
+// To remove the repeaating character froma word in a string=========================
+
+// #include <stdio.h>
+
+// int main(){
+//     char str[] = "helllllo worllldddd ppytthonnn";
+//     int i=0,j=0;
+
+//     while(str[i] != '\0'){
+//         if(str[i] != str[i+1]){
+//             str[j] = str[i];
+//             j++;
+//         }
+//         i++;
+//     }
+//     str[j] = '\0';
+
+//     printf(str);
+//     return 0;
+// }
+
+// To find the longest word in a string =======================================
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char str[50] = "a ab abc abcd abcde";
+//     char word[50], longest_word[50];
+//     int j = 0, i = 0;
+//     while (str[i]  != '\0')
+//     {
+//         if (str[i] != ' ' && str[i] != '\0')
+//         {
+//             word[j] = str[i];
+//             j++;
+//         }
+//         else
+//         {
+//             word[j] = '\0';
+//             if (strlen(word) > strlen(longest_word))
+//             {
+//                 strcpy(longest_word,word);
+//             }
+//             j = 0;
+//         }
+//         if(str[i] == '\0'){
+//             break;
+//         }
+//         i++;
+
+//     }
+//     printf(longest_word);
+
+//     return 0;
+// }
+
+// to check angram ============================================================
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char str1[100], str2[100];
+//     int anagram = 1;
+
+//     printf("Enter first word: ");
+//     scanf("%99s", str1);
+
+//     printf("Enter second word: ");
+//     scanf("%99s", str2);
+
+//     int len1 = strlen(str1);
+//     int len2 = strlen(str2);
+
+//     if (len1 != len2)
+//     {
+//         anagram = 0;
+//     }
+//     else
+//     {
+//         for (int i = 0; i < len1; i++)
+//         {
+//             int found = 0;
+//             for (int j = 0; j < len2; j++)
+//             {
+//                 if (str1[i] == str2[j])
+//                 {
+//                     found = 1;
+//                     str2[j] = '*';
+//                     break;
+//                 }
+//             }
+
+//             if (found == 0)
+//             {
+//                 anagram = 0;
+//                 break;
+//             }
+//         }
+//     }
+
+//     if (anagram == 1)
+//     {
+//         printf("Result: 1 (They are anagrams!)\n");
+//     }
+//     else
+//     {
+//         printf("Result: 0 (Not anagrams.)\n");
+//     }
+
+//     return 0;
+// }
 
