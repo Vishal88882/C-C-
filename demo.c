@@ -772,3 +772,45 @@
 //     return 0;
 // }
 
+// To find the index of a substring=======================================================
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     char str[] = "Hello world";
+//     char sub_str[] = "ld";
+//     int i = 0;
+//     int found = 0;
+//     while (str[i] != '\0')
+//     {
+//         int j = 0;
+//         while (sub_str[j] != '\0' && str[i + j] == sub_str[j])
+//         {
+//             j++;
+//         }
+
+//         if (sub_str[j] == '\0')
+//         {
+//             printf("Substring found at index %d\n", i);
+//             found = 1;
+//             break; 
+//         }
+//         i++;
+//     }
+
+//     return 0;
+// }
+
+
+// To Count the frequency of every word in a sentence.
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char arr[100][100];
+    char str[] = "Hello world";
+    
+    
+}
